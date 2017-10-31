@@ -1,0 +1,385 @@
+.shadow {
+  @include box-shadow(0 1px 2px 0 rgba(0, 0, 0, 0.2));
+}
+
+.nav-tree-badge:after {
+  position: absolute;
+  height: 18px;
+  width: 3.3em;
+  display: inline-block;
+  text-align: center;
+  top: 50%;
+  margin-top: -9px;
+  right: 12px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 18px;
+}
+
+.nav-tree-badge-hot:after {
+  content: "HOT";
+  background-color: #e3495a;
+}
+
+.nav-tree-badge-new:after {
+  content: "NEW";
+  background-color: $color-soft-blue;
+}
+
+.pop-out {
+  @include box-shadow(2px 2px 8px 2px #ccc);
+}
+
+.circular {
+  border-radius: 50%;
+}
+
+.sencha-logo {
+  background-color: $base-color;
+  height: 65px;
+
+  font-size: 16px;
+  color: $lightest-color;
+  margin-left: 17px;
+
+  .main-logo {
+    line-height: 65px;
+    img {
+      margin-left: 22px;
+      margin-right: 22px;
+      top: 8px;
+      position: relative;
+    }
+  }
+}
+
+.sencha-dash-dash-headerbar {
+  padding: 0 30px 0 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
+  border: none;
+  .header-right-profile-image {
+    border-radius: 20px;
+  }
+}
+
+.top-english-button {
+  .x-btn-icon-el {
+    width: 21px;
+    height: 14px;
+  }
+}
+
+.collapsed {
+  .hot-icon, .new-icon {
+    &:after {
+      display: none;
+    }
+  }
+  .x-tree-elbow-img {
+    display: none;
+  }
+
+  .x-tree-node-text {
+    display: none;
+  }
+}
+
+.x-grid-cell {
+  position: relative;
+}
+
+.hot-icon, .new-icon {
+  &.hot-icon:after {
+    content: "HOT";
+    background: #e3495a;
+  }
+  &.new-icon:after {
+    content: "NEW";
+    background: $base-color;
+  }
+  &:after {
+    height: 18px;
+    width: 34px;
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    right: -180px;
+    text-align: center;
+    color: $lightest-color;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 18px;
+  }
+}
+
+.x-treelist-item-tool {
+  height: $panel-navigation-item-line-height;
+  &.hot-icon:after, &.new-icon:after {
+    background: $panel-header-background-color;
+    content: '';
+  }
+}
+
+//.toolbar-btn-shadow{
+//    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+//    .x-btn-over{
+//        background-color: $button-toolbar-hover-background-color;
+//    }
+//}
+
+//Add border around html editor field
+.x-html-editor-input {
+  border: 1px solid #ccc;
+}
+
+//UI Styles for buttons
+@include extjs-button-small-ui(
+        $ui: 'soft-blue',
+        $background-color: $color-soft-blue,
+        $border-color: darken($color-soft-blue, 5%)
+);
+@include extjs-button-large-ui(
+        $ui: 'soft-blue',
+        $line-height: 34px,
+        $background-color: $color-soft-blue,
+        $border-color: darken($color-soft-blue, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+        $ui: 'soft-blue',
+        $background-color: $color-soft-blue,
+        $border-color: darken($color-soft-blue, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'facebook',
+        $background-color: $social-facebook-btn-background,
+        $border-color: darken($social-facebook-btn-background, 5%)
+);
+@include extjs-button-large-ui(
+        $ui: 'facebook',
+        $line-height: 34px,
+        $background-color: $social-facebook-btn-background,
+        $border-color: darken($social-facebook-btn-background, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'soft-cyan',
+        $background-color: $color-soft-cyan,
+        $border-color: darken($color-soft-cyan, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+        $ui: 'soft-cyan',
+        $background-color: $color-soft-cyan,
+        $border-color: darken($color-soft-cyan, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'soft-green',
+        $background-color: $color-soft-green,
+        $border-color: darken($color-soft-green, 5%)
+);
+@include extjs-button-large-ui(
+        $ui: 'soft-green',
+        $line-height: 34px,
+        $background-color: $color-soft-green,
+        $border-color: darken($color-soft-green, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+        $ui: 'soft-green',
+        $background-color: $color-soft-green,
+        $border-color: darken($color-soft-green, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'soft-red',
+        $background-color: $color-soft-red,
+        $border-color: darken($color-soft-red, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+        $ui: 'soft-red',
+        $background-color: $color-soft-red,
+        $border-color: darken($color-soft-red, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'soft-purple',
+        $background-color: $color-soft-purple,
+        $border-color: darken($color-soft-purple, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+        $ui: 'soft-purple',
+        $background-color: $color-soft-purple,
+        $border-color: darken($color-soft-purple, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'gray',
+        $background-color: $color-gray,
+        $border-color: darken($color-gray, 5%)
+);
+@include extjs-button-large-ui(
+        $ui: 'gray',
+        $line-height: 34px,
+        $background-color: $color-gray,
+        $border-color: darken($color-gray, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+        $ui: 'gray',
+        $background-color: $color-gray,
+        $border-color: darken($color-gray, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'green',
+        $background-color: $color-green,
+        $border-color: darken($color-green, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+        $ui: 'green',
+        $background-color: $color-green,
+        $border-color: darken($color-green, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'blue',
+        $background-color: $color-blue,
+        $border-color: darken($color-blue, 5%)
+);
+@include extjs-button-toolbar-small-ui(
+        $ui: 'blue',
+        $background-color: $color-blue,
+        $border-color: darken($color-blue, 5%)
+);
+
+@include extjs-button-small-ui(
+        $ui: 'header',
+        $color: #999,
+        $glyph-color: #919191,
+        $background-color: transparent,
+        $border-width: 0
+);
+
+//------------------main---------------------
+.Container-main {
+  height: 1000px!important;
+  top: 80px !important;
+  background-color: #f6f6f6;
+  .x-box-inner{
+    height: 100%!important;
+  }
+}
+
+//------------------navbar---------------------
+.Container-nav{
+  height: 1000px!important;
+  margin-right: 10px ;
+  .x-treelist-toolstrip {
+    .x-treelist-item-tool {
+      width: 100% !important;
+      background-color: #49535f !important;
+      height: 60px;
+      line-height: 60px;
+    }
+    .x-treelist-item-selected {
+      background-color: #5eb9f0 !important;
+    }
+  }
+}
+//------------------navsection---------------------
+.Container-section {
+  width: 84.2%!important;
+  top: 12px !important;
+  height: 969px!important;
+  overflow: visible!important;
+.x-panel-bodyWrap{
+  overflow: visible!important;
+}
+  .x-fit-item{
+    width: 100%!important;
+    overflow: visible!important;
+    .x-panel-body{
+      width: 100%!important;
+      overflow: visible!important;
+      .x-box-inner{
+        width: 100%!important;
+        overflow: visible!important;
+        .x-box-target{
+          width: 100%!important;
+          //----------------------------------
+          .Container-section-select{
+            border:none;
+            height: 969px!important;
+            width:17.6%!important;
+            box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
+            z-index:1;
+            overflow: visible!important;
+            //----------------------------------
+            .x-grid-item-container{
+              width: 100%!important;
+            }
+            .x-panel-bodyWrap{
+              overflow: visible!important;
+              .x-panel-body{
+                height: 100%!important;
+                border:none;
+                overflow: visible!important;
+                .x-tree-view{
+                  overflow: visible!important;
+
+                }
+                .x-grid-header-ct{
+                  overflow: visible!important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //------------------section---------------------
+  .Container-section-article{
+    width: 81.8%!important;
+    left: 18.4%!important;
+    overflow: visible!important;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.3);
+    //.Wrapper-titlebar{
+    //  padding:0;
+    //  height: 60px;
+    //  border: 1px solid #000;
+    //    .x-box-target{
+    //      height: 100%!important;
+    //    }
+    //
+    //
+    //
+    //}
+    .Wrapper-section{
+      border:0;
+
+      .Wrapper-titlebar-btn{
+        line-height: 60px;
+        top: 50%!important;
+        right: 0!important;
+        left: auto!important;
+        transform:translateY(-50%);
+        height: 30px;
+        width: 100px;
+        background-color: #5db9f0;
+        color: #fff;
+        border-radius: 5px;
+      }
+      .Wrapper-section-titile{
+        top: 0!important;
+      }
+    }
+  }
+}
+
+
+
+
+//1617

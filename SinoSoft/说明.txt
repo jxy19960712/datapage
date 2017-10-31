@@ -1,0 +1,49 @@
+﻿Ext6.5使用说明
+1目录树
+	app文件夹为程序主目录，逻辑处理以及视图页面全部在这个目录中
+	build文件夹为通过 build、watch命令后程序临时文件和打包后的项目文件所在目录
+	ext文件夹为ext源码包
+	resources文件夹为资源文件夹，存放项目所有用到的图片，使用时在程序代码中的任何地方直接使用resources下文件夹路径调用，例：'images/'
+	sass文件夹为样式目录，其中var和src文件夹中目录和app文件夹保持一致，文件和app下目录中文件名称保持一致，以.scss结尾。var中定义当前页面中用到的css参数，此参数在整改系统中公用，src中定义新css类或者对源类进行重写。
+	app.js和app文件夹下的Application.js有继承关系，可以理解为同一个文件，类似web.config，为项目入口文件
+	app.json为项目配置文件，配置了项目的起始页面（index.html），项目的类型（classic、modern），项目模板等等。
+2项目入口文件Application.js，项目起始配置写这和写在app.js文件没有区别，都可以。
+	name：顶级命名空间、项目名称
+	requires：项目启用时预先加载那些文件，只在1841模式下有用。
+	stores：项目启用时预先初始化的数据源。
+	mainView：项目启用时打开的页面。
+	launch：项目启用时执行的脚本。
+	onAppUpdate：只在打包后有效果，打包后项目缓存文件中会有一个项目版本号，每次打包后该版本号+1，在浏览器中加载页面时，如果从服务器获取到的缓存版本和本地不一致，则从服务器加载页面内容，否则从本地缓存中获取页面内容。
+	defaultToken：只在modern模式下有用，类似mainView，项目启动后自动跳到这个路由。
+3类的定义
+	Ext.define(A,B);A为类的命名空间+类名，要求：命名空间必须和路径保持一致，类目必须和文件名保持一致。
+		B:为json参数以下为json参数中的字段说明：
+			extend：继承的类的全称。
+			alias：类的简称，全称可以使用的地方都可以用简称来使用，全局唯一标识，不能重复。
+				控件一般不使用该属性，controller中以‘controller.’开头,store中以‘store.’开头。
+			xtype、ptype：控件的简称，只有控件使用，用来设置控件类型时使用。{xtype:'panel'}.
+			config：定义类的一些需要可以在json对象中初始化的参数，例如：{xtype:'panel',myparam:'aaaa'},这种参数在view或者controller中使用需要用get\set来修饰，例如：var myparam=view.getMyparam(); view.setMyparam("bbbb"),注意第一个字母要大写
+			alternateClassName：当定义的为静态类时使用该参数定义静态类简称。
+			statics：json对象，定义该静态类中的属性以及方法。
+4控件标识：
+	id：全局唯一标识，id和html控件属性id等价，获取时使用Ext.get(id)。
+	itemId:控件范围内唯一标识，获取时使用view.getComponent(itemId).
+	reference:controller范围内唯一标识，获取时使用controller.lookupReference(reference)，此处lookup在api文档中说是lookupReference的shortname但是在使用时会报错。
+5内置静态类使用说明
+	session：向浏览器缓存区永久存储一些数据，此数据是加密的，只要用户不手动清理缓存数据会一直存在。
+		session.setItem();session.getItem();
+	waiting：提供一个已经写好的等待模态页面，用于ajax访问等待。
+		waiting.show();waiting.close();连续执行多次show只打开一个页面。
+	BD：存储或执行一些基础数据处理的类。
+		BD.GuidCode:存储登陆时产生的令牌
+		BD.WorkerInfo：存储登陆验证后服务端返回的用户信息，包括模块以及特殊权限等。
+		BD.DoAjax：对ajax进行封装
+			quiet：bool 是否显示提示信息以及等待窗，
+			url：string ajax提交的url，
+			method：string  get post put delete option 
+			params：{}  参数，
+			success：执行成功时调用的方法，
+			failure：执行失败时调用的方法
+		BD.GetDateFormat：当Ext自带的Date碰到不能转换的日期时使用
+		BD.StartIM：计时器用法参考
+		BD.StopIM：计时器用法参考

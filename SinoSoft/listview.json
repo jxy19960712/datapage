@@ -1,0 +1,123 @@
+﻿[
+    {
+        name: 'Kitchen Sink',
+        thumb: 'sink.png',
+        Introduction: 'kitchensink',
+        type: 'Application'
+    },
+    {
+        name: 'Twitter app',
+        thumb: 'twitter.png',
+        Introduction: 'twitter',
+        type: 'Application'
+    },
+    {
+        name: 'Kiva app',
+        thumb: 'kiva.png',
+        Introduction: 'kiva',
+        type: 'Application'
+    },
+    {
+        // duplicate Kiva app as an example so something happens when type is the secondary sort in the multisort example
+        name: 'Kiva app',
+        thumb: 'kiva.png',
+        Introduction: 'kiva',
+        type: 'Example' 
+    },
+    {
+        name: 'Geocongress',
+        thumb: 'geocongress.png',
+        Introduction: 'geocongress',
+        type: 'Application'
+    },
+    {
+        name: 'AJAX',
+        thumb: 'ajax.png',
+        Introduction: 'ajax',
+        type: 'Example'
+    },
+    {
+        name: 'Carousel',
+        thumb: 'carousel.png',
+        Introduction: 'carousel',
+        type: 'Example'
+    },
+    {
+        name: 'Drag &amp; Drop',
+        thumb: 'DnD.png',
+        Introduction: 'dragdrop',
+        type: 'Example'
+    },
+    {
+        name: 'Forms',
+        thumb: 'forms.png',
+        Introduction: 'forms',
+        type: 'Example'
+    },
+    {
+        name: 'Guide',
+        thumb: 'guide.png',
+        Introduction: 'guide',
+        type: 'Example'
+    },
+    {
+        name: 'Icons',
+        thumb: 'icons.png',
+        Introduction: 'icons',
+        type: 'Example'
+    },
+    {
+        name: 'Map',
+        thumb: 'map.png',
+        Introduction: 'map',
+        type: 'Example'
+    },
+    {
+        name: 'Nested List',
+        thumb: 'nestedList.png',
+        Introduction: 'nestedlist',
+        type: 'Example'
+    },
+    {
+        name: 'Overlays',
+        thumb: 'overlays.png',
+        Introduction: 'overlays',
+        type: 'Example'
+    },
+    {
+        name: 'Picker',
+        thumb: 'picker.png',
+        Introduction: 'picker',
+        type: 'Example'
+    },
+    {
+        name: 'Sortable',
+        thumb: 'sortable.png',
+        Introduction: 'sortable',
+        type: 'Example'
+    },
+    {
+        name: 'Tabs',
+        thumb: 'tabs.png',
+        Introduction: 'tabs',
+        type: 'Example'
+    },
+    {
+        name: 'Tabs 2',
+        thumb: 'tabs2.png',
+        Introduction: 'tabs2',
+        type: 'Example'
+    },
+    {
+        name: 'Toolbars',
+        thumb: 'toolbars.png',
+        Introduction: 'toolbars',
+        type: 'Example'
+    },
+    {
+        name: 'YQL',
+        thumb: 'yql.png',
+        Introduction: 'yql',
+        type: 'Example'
+    }
+]

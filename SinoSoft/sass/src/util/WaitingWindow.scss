@@ -1,0 +1,35 @@
+.wait-window{
+    .x-window-body {
+        background-color:transparent;
+    }
+
+    &.x-window-default {
+        background-color:transparent;
+        border: none;
+        border-radius: 0;
+        padding: 0;
+    }
+}
+.wait-launching{
+
+}
+.wait-launching::before {
+    -webkit-animation: rotate-animation 1s linear infinite;
+    animation: rotate-animation 1s linear infinite;
+    -webkit-transform-origin: 50% 50%;
+    transform-origin: 50% 50%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-image: url(/resources/images/app/loading.png);
+    background-position: center;
+    content: '';
+    position: absolute;
+    margin-top: -15px;
+    margin-left: -15px;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+}

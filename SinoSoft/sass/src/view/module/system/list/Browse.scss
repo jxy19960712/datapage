@@ -1,0 +1,44 @@
+.dataview-multisort-item {
+    height: 114px;
+    margin: 8px 8px 4px 8px;
+    border: 1px solid #302c2c;
+    float: left;
+}
+.dataview-multisort-item-selected{
+    border:1px solid red;
+}
+
+.dataview-multisort-item h3 {
+    font-size: 12px;
+    font-weight: normal;
+    text-align: center;
+    padding-top: 5px;
+    margin: 0;
+}
+.dataview-multisort-item .title{
+    width:73px;
+    height:98px;
+    float: left;
+    margin: 8px;
+}
+.dataview-multisort-item .content{
+    width:200px;
+    word-wrap:break-word;
+    overflow:hidden;
+    height: 114px;
+}
+// These get shared by other views
+
+.x-btn .sort-direction-asc {
+    background-image: theme-background-image('grid/sort_asc');
+    background-position: 4px center;
+}
+
+.x-btn .sort-direction-desc {
+    background-image: theme-background-image('grid/sort_desc');
+    background-position: 4px center;
+}
+.black16{
+    font-size:16px;
+    color:black;
+}
