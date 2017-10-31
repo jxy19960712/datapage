@@ -264,18 +264,15 @@
 
 //------------------main---------------------
 .Container-main {
-  height: 1000px!important;
-  top: 80px !important;
+  //height: 1000px !important;
+  //top: 80px !important;
   background-color: #f6f6f6;
-  .x-box-inner{
-    height: 100%!important;
-  }
 }
 
 //------------------navbar---------------------
-.Container-nav{
-  height: 1000px!important;
-  margin-right: 10px ;
+.Container-nav {
+  height: 1000px !important;
+  margin-right: 10px;
   .x-treelist-toolstrip {
     .x-treelist-item-tool {
       width: 100% !important;
@@ -288,50 +285,51 @@
     }
   }
 }
+
 //------------------navsection---------------------
 .Container-section {
-  width: 84.2%!important;
+  width: 84.2% !important;
   top: 12px !important;
-  height: 969px!important;
-  overflow: visible!important;
-.x-panel-bodyWrap{
-  overflow: visible!important;
-}
-  .x-fit-item{
-    width: 100%!important;
-    overflow: visible!important;
-    .x-panel-body{
-      width: 100%!important;
-      overflow: visible!important;
-      .x-box-inner{
-        width: 100%!important;
-        overflow: visible!important;
-        .x-box-target{
-          width: 100%!important;
+  height: 969px !important;
+  overflow: visible !important;
+  .x-panel-bodyWrap {
+    overflow: visible !important;
+  }
+  .x-fit-item {
+    width: 100% !important;
+    overflow: visible !important;
+    .x-panel-body {
+      width: 100% !important;
+      overflow: visible !important;
+      .x-box-inner {
+        width: 100% !important;
+        overflow: visible !important;
+        .x-box-target {
+          width: 100% !important;
           //----------------------------------
-          .Container-section-select{
-            border:none;
-            height: 969px!important;
-            width:17.6%!important;
-            box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
-            z-index:1;
-            overflow: visible!important;
+          .Container-section-select {
+            border: none;
+            height: 969px !important;
+            width: 17.6% !important;
+            box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+            z-index: 1;
+            overflow: visible !important;
             //----------------------------------
-            .x-grid-item-container{
-              width: 100%!important;
+            .x-grid-item-container {
+              width: 100% !important;
             }
-            .x-panel-bodyWrap{
-              overflow: visible!important;
-              .x-panel-body{
-                height: 100%!important;
-                border:none;
-                overflow: visible!important;
-                .x-tree-view{
-                  overflow: visible!important;
+            .x-panel-bodyWrap {
+              overflow: visible !important;
+              .x-panel-body {
+                height: 100% !important;
+                border: none;
+                overflow: visible !important;
+                .x-tree-view {
+                  overflow: visible !important;
 
                 }
-                .x-grid-header-ct{
-                  overflow: visible!important;
+                .x-grid-header-ct {
+                  overflow: visible !important;
                 }
               }
             }
@@ -341,11 +339,11 @@
     }
   }
   //------------------section---------------------
-  .Container-section-article{
-    width: 81.8%!important;
-    left: 18.4%!important;
-    overflow: visible!important;
-    box-shadow: 0 3px 10px 0 rgba(0,0,0,.3);
+  .Container-section-article {
+    width: 81.8% !important;
+    left: 18.4% !important;
+    overflow: visible !important;
+    box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .3);
     //.Wrapper-titlebar{
     //  padding:0;
     //  height: 60px;
@@ -357,29 +355,10 @@
     //
     //
     //}
-    .Wrapper-section{
-      border:0;
-
-      .Wrapper-titlebar-btn{
-        line-height: 60px;
-        top: 50%!important;
-        right: 0!important;
-        left: auto!important;
-        transform:translateY(-50%);
-        height: 30px;
-        width: 100px;
-        background-color: #5db9f0;
-        color: #fff;
-        border-radius: 5px;
-      }
-      .Wrapper-section-titile{
-        top: 0!important;
-      }
+    .Wrapper-section {
+      border: 0;
     }
   }
 }
-
-
-
 
 //1617

@@ -25,14 +25,8 @@
             singleExpand: false,
             listeners: {
                 //itemclick:'ontreenodeclick'
-            },
+            }
             //bind: '{navItems}'
-            items:[
-                {
-                    xtype:'container',
-                    cls:'ffff'
-                }
-            ]
         },
         {
             xtype: 'container',
@@ -47,30 +41,46 @@
                 margin: '0 0 5 0',
             },
             items: [
-                //
-                {
-                    cls:'Wrapper-titlebar',
-                    xtype: "toolbar",
-                    // dock: 'top',
-                    // style:'border:0px',
-                    // layout: 'column',
-                    items: [
-                        {
-                            cls:'Wrapper-titlebar-btn',
-                            xtype: 'button',
-                            text: '查询',
-                            //handler: function (btn) {
-                            //    btn.ownerCt.ownerCt.down('hidetitlegrid').show();
-                            //    btn.ownerCt.ownerCt.down('hidetitlegrid').expand();
-                            //}
-                        },
-                    ]
-                },
+                // {
+                //     cls: 'Wrapper-titlebar',
+                //     xtype: "toolbar",
+                //     dock: 'top',
+                //     style:'border:0px',
+                //     layout: 'column',
+                //     items: [
+                //         {
+                //             cls:'Wrapper-titlebar-btn',
+                //             xtype: 'button',
+                //             text: '查询',
+                //             //handler: function (btn) {
+                //             //    btn.ownerCt.ownerCt.down('hidetitlegrid').show();
+                //             //    btn.ownerCt.ownerCt.down('hidetitlegrid').expand();
+                //             //}
+                //         },
+                //     ]
+                // },
                 {
                     cls: 'Wrapper-section',
                     xtype: 'grid',
-                    //title: '用户信息',
-                    //ui:'light',
+                    // title: '用户信息',
+                    // ui:'light',
+                    store:{
+                        data:[
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'},
+                            {Name:'aaaaaa',Nation:'汉族',Sex:'男'}
+                        ]
+                    },
                     flex: 1,
                     sortableColumns: false,
                     enableColumnHide: false,
@@ -78,51 +88,67 @@
                     dockedItems: [
                         {
                             xtype: 'toolbar',
-                            height: 60,
-                            'padding':0,
+                            //height: 60,
+                            'padding': 0,
                             items: [
                                 {
-                                    xtype:'container',
-                                    // style:{
-                                        'height:':'20px',
-
-                                        'width':'4px',
-                                        'background-color':'#36baf5'
-                                    // }
+                                    cls:'Wrapper-section-titile-icon',
+                                    xtype: 'container',
                                 },
                                 {
                                     cls: 'Wrapper-section-titile',
-                                    xtype: 'label', text: '用户信息', style: {
-                                    'font-weight': 'bold',
-                                    'font-size': '17px',
-                                    'font-weight': '400',
-                                    'color': '#4b6178',
-                                    'height':'60px',
-                                    'vertical-align':'middle',
-                                    'line-height':'60px',
-                                }
+                                    xtype: 'label', text: '用户信息',
+                                    style: {
+                                        'font-weight': 'bold',
+                                        'font-size': '17px',
+                                        'font-weight': '400',
+                                        'color': '#4b6178',
+                                        'height': '60px',
+                                        'vertical-align': 'middle',
+                                        'line-height': '60px',
+                                    }
                                 },
                                 {
                                     cls: 'Wrapper-titlebar-btn',
                                     xtype: 'button',
                                     text: '查询',
+                                    style:{
+                                        'vertical-align': 'middle',
+                                        'line-height': '60px',
+                                    }
                                     //handler: function (btn) {
                                     //    btn.ownerCt.ownerCt.down('hidetitlegrid').show();
                                     //    btn.ownerCt.ownerCt.down('hidetitlegrid').expand();
                                     //}
                                 },
+                                {
+                                    cls: 'asas',
+                                    xtype: 'container',
+                                    // text: '查询',
+                                    style:{
+                                        'height': '100px',
+                                        'width': '100%',
+                                        'background-color':'red'
+                                    }
+                                    //handler: function (btn) {
+                                    //    btn.ownerCt.ownerCt.down('hidetitlegrid').show();
+                                    //    btn.ownerCt.ownerCt.down('hidetitlegrid').expand();
+                                    //}
+                                }
                             ]
                         },
-                        {
-                            xtype: 'pagingtoolbar',
-                            dock: 'bottom',
-                            displayInfo: true,
-
-                        },
+                        // {
+                        //     xtype: 'pagingtoolbar',
+                        //     dock: 'bottom',
+                        //     displayInfo: true,
+                        //     cls:'123123'
+                        // },
                     ],
                     columns: [
                         {text: '序号', xtype: 'rownumberer'},
-                        {text: '姓名', width: 120,}
+                        {text: '姓名',dataIndex:'Name', flex:1},
+                        {text: '民族',dataIndex:'Nation', width: 120,},
+                        {text: '性别',dataIndex:'Sex', width: 120,}
                     ],
                 },
                 {

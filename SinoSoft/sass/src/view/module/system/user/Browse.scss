@@ -1,3 +1,77 @@
-.Wrapper-section-titile{
-
+.Wrapper-titlebar-btn {
+  line-height: 60px;
+  right: 10px !important;
+  left: auto !important;
+  height: 30px;
+  width: 100px;
+  background-color: #5db9f0;
+  border-radius: 5px;
+  span {
+    color: #fff !important;
+  }
 }
+
+.Wrapper-section-titile {
+  top: 0 !important;
+  left: 45px!important;
+  font-weight:600!important;
+}
+
+.Wrapper-section-titile-icon {
+  height: 20px;
+  width: 4px;
+  background-color: #36baf5;
+  transform: translateY(-50%);
+  left: 20px!important;
+  &::before{
+    position: absolute;
+    right:-4px;
+    top: 0;
+    content: '';
+    height: 20px;
+    width: 2px;
+    background-color: #36baf5;
+
+  }
+}
+
+//--------------------------------right selectBar----------------
+.Item-option {
+  //background-color: gray;
+}
+
+[aria-expanded=true] .x-tree-elbow-img.x-tree-elbow-end-plus.x-tree-expander,
+[aria-expanded=true] .x-tree-elbow-img.x-tree-elbow-plus.x-tree-expander {
+  position: relative;
+  &::before {
+    width: 0;
+    height: 0;
+    content: '';
+    border: 5px solid #36bbf4;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+    border-right-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+  }
+}
+
+[aria-expanded=false] .x-tree-elbow-img.x-tree-elbow-end-plus.x-tree-expander, [aria-expanded=false] .x-tree-elbow-img.x-tree-elbow-plus.x-tree-expander {
+  position: relative;
+  &::before {
+    content: '';
+    width: 7px;
+    height: 7px;
+    background-color: #36bbf4;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 50%;
+  }
+}
+
+//http://docs.sencha.com/extjs/6.5.0/classic/Ext.data.NodeInterface.html
+
