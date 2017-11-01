@@ -1,5 +1,5 @@
 .Container-headerbar{
-  height: 80px;
+  height: 50px;
   background-color: #fff;
   width: 100%;
   padding:0;
@@ -8,16 +8,27 @@
   line-height: 0;
   box-shadow: 0 0 10px 0 rgba(0,0,0,.3);
   z-index:2;
-
-
-
-
-
   .Container-headerbar-log{
-    height: 80px;
+    height: 50px;
     position: static!important;
     display:inline-block;
     background-color: #5eb9f0;
+    .Container-headerbar-log-pic{
+      position: absolute;
+      top: 50%;
+      left: 10px;
+      transform: translateY(-50%);
+    }
+    .Container-headerbar-log-txt{
+      h1{
+        height: 50px;
+        line-height:50px;
+        font-size:16px;
+        vertical-align: middle;
+        margin:0 0 0 60px;
+        color:#fff
+      }
+    }
   }
 
 
@@ -27,9 +38,9 @@
 
 
   .Container-headerbar-btn{
-    height: 80px;
+    height: 50px;
     width: 0.9%;
-    line-height: 80px;
+    line-height: 50px;
     position: static!important;
     display: inline-block;
     border:none;

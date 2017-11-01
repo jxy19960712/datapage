@@ -265,7 +265,7 @@
 //------------------main---------------------
 .Container-main {
   //height: 1000px !important;
-  //top: 80px !important;
+  top: 50px !important;
   background-color: #f6f6f6;
 }
 
@@ -340,7 +340,7 @@
   }
   //------------------section---------------------
   .Container-section-article {
-    width: 81.8% !important;
+    //width: 81.8% !important;
     left: 18.4% !important;
     overflow: visible !important;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .3);
@@ -357,6 +357,8 @@
     //}
     .Wrapper-section {
       border: 0;
+      border-top:1px solid #404040;
+      border-radius: 0;
     }
   }
 }

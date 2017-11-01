@@ -50,7 +50,20 @@ Ext.define('SinoSoft.view.headerbar.headerbar', {
             reference: 'senchaLogo',
             userCls: 'main-logo',
             cls:'Container-headerbar-log',
-            width:250
+            width:250,
+            items:[
+                {
+                    cls: 'Container-headerbar-log-pic',
+                    xtype: 'container',
+                    html: '<img src="images/logo.png">',
+                },
+                {
+                    cls: 'Container-headerbar-log-txt',
+                    xtype: 'container',
+                    html: '<h1>毕节智慧组工 ● 干部云</h1>',
+                    height:80
+                },
+            ]
         },
             {
                 cls:'Container-headerbar-btn',
