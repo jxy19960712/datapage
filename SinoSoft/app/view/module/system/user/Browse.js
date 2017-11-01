@@ -61,15 +61,15 @@
 
                 {
                     xtype: 'toolbar',
-                    //height: 60,
                     'padding': 0,
+                    cls:'Wrapper-headerbar',
                     items: [
                         {
-                            cls: 'Wrapper-section-titile-icon',
+                            cls: 'Wrapper-headerbar-titile-icon',
                             xtype: 'container',
                         },
                         {
-                            cls: 'Wrapper-section-titile',
+                            cls: 'Wrapper-headerbar-titile',
                             xtype: 'label', text: '用户信息',
                             style: {
                                 'font-weight': 'bold',
@@ -82,7 +82,7 @@
                             }
                         },
                         {
-                            cls: 'Wrapper-titlebar-btn',
+                            cls: 'Wrapper-headerbar-btn',
                             xtype: 'button',
                             text: '查询',
                             style: {
