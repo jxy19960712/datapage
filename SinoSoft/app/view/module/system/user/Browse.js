@@ -28,6 +28,10 @@
             //bind: '{navItems}'
         },
         {
+            xtype: 'splitter',
+            collapseTarget: 'prev',
+        },
+        {
             xtype: 'container',
             cls: 'Container-section-article',
             flex: 1,

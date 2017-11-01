@@ -299,21 +299,21 @@
     width: 100% !important;
     overflow: visible !important;
     .x-panel-body {
-      width: 100% !important;
-      overflow: visible !important;
+      //width: 100% !important;
+      //overflow: visible !important;
       .x-box-inner {
-        width: 100% !important;
-        overflow: visible !important;
+        //width: 100% !important;
+        //overflow: visible !important;
         .x-box-target {
           width: 100% !important;
           //----------------------------------
           .Container-section-select {
             border: none;
             //height: 969px !important;
-            width: 17.6% !important;
+            //width: 17.6% !important;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
             z-index: 1;
-            overflow: visible !important;
+            //overflow: visible !important;
             //----------------------------------
             .x-grid-item-container {
               width: 100% !important;
@@ -341,7 +341,7 @@
   //------------------section---------------------
   .Container-section-article {
     //width: 81.8% !important;
-    left: 18.4% !important;
+    //left: 18.4% !important;
     overflow: visible !important;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, .3);
     //.Wrapper-titlebar{

@@ -27,13 +27,33 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
         //     }
         //     //bind: '{navItems}'
         // },
+
+        {
+            xtype: 'headerbar',
+            // height:100,
+            cls:'Container-section-topbar',
+            style:{
+                'backgroundcolor':'red',
+                // 'z-index':'3'
+            }
+            // store: 'files',
+            // width: '17.6%',
+            // cls: 'Container-section-select',
+            // expanderFirst: false,
+            // expanderOnly: false,
+            // singleExpand: false,
+            // listeners: {
+            //     itemclick:'ontreenodeclick'
+            // }
+            //bind: '{navItems}'
+        },
         {
             xtype: 'tabpanel',
-            width: 280,
+            cls:'Container-section-select2',
+            width: '20.6%',
             collapsible: false,
             tabPosition: 'left',
             tabRotation:0,
-
             ui: 'navigation',
             defaults: {
                 textAlign: 'left',
@@ -41,7 +61,7 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
             },
             items: [
                 {
-                    title:'aaa',
+                    title:'全部信息集',
                     xtype: 'treepanel',
                     store: 'files',
                     // cls: 'Container-section-select',
@@ -54,7 +74,7 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    title: 'bbb',
+                    title: '按分类查看',
                     xtype: 'treepanel',
                     store: 'files',
                     // cls: 'Container-section-select',
@@ -67,7 +87,7 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    title: 'ccc',
+                    title: '我的收藏',
                     xtype: 'treepanel',
                     store: 'files',
                     // cls: 'Container-section-select',
@@ -95,6 +115,10 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
             xtype: 'splitter',
             collapseTarget: 'prev',
         },
+
+
+
+
         {
             xtype: 'container',
             cls: 'Container-section-article',
