@@ -89,7 +89,73 @@
                             inputValue: true,
                             uncheckedValue:false
 
-                        }
+                        },
+
+
+
+
+
+
+                        {
+                            xtype: 'tabpanel',
+                            width: 300,
+                            // cls:'Container-section-select',
+                            collapsible: true,
+                            collapseDirection: 'left',
+                            tabPosition: 'left',
+                            ui: 'navigation',
+                            defaults: {
+                                textAlign: 'left',
+                                bodyPadding: 15
+                            },
+                            items: [
+                                {
+                                    title:'aaa',
+                                    xtype: 'container',
+                                    // store: 'files',
+                                    expanderFirst: false,
+                                    expanderOnly: false,
+                                    singleExpand: false,
+                                    width:200,
+                                    height:200,
+                                    text:'aaa',
+                                    listeners: {
+                                        //itemclick:'ontreenodeclick'
+                                    }
+                                    //bind: '{navItems}'
+                                },
+                                {
+                                    title: 'bbb',
+                                    xtype: 'container',
+                                    // store: 'files',
+                                    expanderFirst: false,
+                                    expanderOnly: false,
+                                    singleExpand: false,
+                                    width:200,
+                                    height:200,
+                                    text:'aaa',
+                                    listeners: {
+                                        //itemclick:'ontreenodeclick'
+                                    }
+                                    //bind: '{navItems}'
+                                },
+                                {
+                                    title: 'ccc',
+                                    xtype: 'container',
+                                    // store: 'files',
+                                    expanderFirst: false,
+                                    expanderOnly: false,
+                                    singleExpand: false,
+                                    width:200,
+                                    height:200,
+                                    text:'aaa',
+                                    listeners: {
+                                        //itemclick:'ontreenodeclick'
+                                    }
+                                    //bind: '{navItems}'
+                                },
+                            ]
+                        },
                     ]
                 }
             ]
