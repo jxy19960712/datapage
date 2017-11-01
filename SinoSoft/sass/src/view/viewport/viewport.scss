@@ -288,7 +288,7 @@
 
 //------------------navsection---------------------
 .Container-section {
-  width: 84.2% !important;
+  //width: 84.2% !important;
   top: 12px !important;
   height: 969px !important;
   overflow: visible !important;
@@ -357,7 +357,7 @@
     //}
     .Wrapper-section {
       border: 0;
-      border-top:1px solid #404040;
+      border-top:1px solid #ccc;
       border-radius: 0;
     }
   }

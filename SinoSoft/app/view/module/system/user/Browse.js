@@ -63,7 +63,6 @@
                     xtype: 'toolbar',
                     //height: 60,
                     'padding': 0,
-                    cls: 'aaaa',
                     items: [
                         {
                             cls: 'Wrapper-section-titile-icon',
@@ -98,9 +97,8 @@
                     height:60,
                     width:'100%',
                     padding:0,
-                    cls:'1212',
                     style:{
-                        'background-color':'#f1f1f1'
+                        // 'background-color':'#f1f1f1'
 
                     }
                 },

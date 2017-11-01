@@ -28,9 +28,6 @@ Ext.define('SinoSoft.view.viewport.viewmodel', {
                 expanded: true,
                 children: [
                     {
-                        text:'aaa'
-                    }
-                    ,{
                     text: 'Home',
                     iconCls: 'x-fa fa-home',                    
                     children: [{
