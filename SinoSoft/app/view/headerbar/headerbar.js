@@ -61,7 +61,6 @@ Ext.define('SinoSoft.view.headerbar.headerbar', {
                     cls: 'Container-headerbar-log-txt',
                     xtype: 'container',
                     html: '<h1>毕节智慧组工 ● 干部云</h1>',
-                    height:80
                 },
             ]
         },

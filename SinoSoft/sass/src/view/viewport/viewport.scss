@@ -265,14 +265,14 @@
 //------------------main---------------------
 .Container-main {
   //height: 1000px !important;
-  top: 50px !important;
-  background-color: #f6f6f6;
+  //top: 50px !important;
+  //background-color: #f6f6f6;
 }
 
 //------------------navbar---------------------
 .Container-nav {
-  height: 1000px !important;
-  margin-right: 10px;
+  //height: 1000px !important;
+  margin-right: 5px;
   .x-treelist-toolstrip {
     .x-treelist-item-tool {
       width: 100% !important;
@@ -289,8 +289,8 @@
 //------------------navsection---------------------
 .Container-section {
   //width: 84.2% !important;
-  top: 12px !important;
-  height: 969px !important;
+  top: 5px !important;
+  //height: 969px !important;
   overflow: visible !important;
   .x-panel-bodyWrap {
     overflow: visible !important;
@@ -309,7 +309,7 @@
           //----------------------------------
           .Container-section-select {
             border: none;
-            height: 969px !important;
+            //height: 969px !important;
             width: 17.6% !important;
             box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
             z-index: 1;
