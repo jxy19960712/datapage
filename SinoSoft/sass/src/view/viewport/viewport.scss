@@ -272,7 +272,7 @@
 //------------------navbar---------------------
 .Container-nav {
   //height: 1000px !important;
-  margin-right: 5px;
+  margin-right: 5px!important;
   .x-treelist-toolstrip {
     .x-treelist-item-tool {
       width: 100% !important;
@@ -300,10 +300,10 @@
     overflow: visible !important;
     .x-panel-body {
       //width: 100% !important;
-      //overflow: visible !important;
+      overflow: visible !important;
       .x-box-inner {
         //width: 100% !important;
-        //overflow: visible !important;
+        overflow: visible !important;
         .x-box-target {
           width: 100% !important;
           //----------------------------------
