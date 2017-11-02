@@ -31,7 +31,7 @@ Ext.define('SinoSoft.view.module.system.temp2.Browse', {
             },
             {
                 xtype: 'tbtext',
-                text: '张翰时,男,大方县县委书记,常委',
+                text: '张翰时，男，大方县县委书记，常委',
                 height: 45,
                 style: {
                     'line-height': '45px',

@@ -110,25 +110,231 @@
                             }
                         },
                         {
+                            cls: 'Wrapper-headerbar-search',
+                            width: 200,
+                            xtype: 'searchfieldex',
+                            paramName: 'text',
+                            isAjax: true,
+                        },
+                        {
                             cls: 'Wrapper-headerbar-btn',
                             xtype: 'button',
                             text: '查询',
                             style: {
                                 'vertical-align': 'middle',
                                 'line-height': '60px',
-                            }
+                            },
                         },
+
+
+                        //----------------- 查询模态框start
+                        // {
+                        //     xtype:'container',
+                        //     width:'100%',
+                        //     height:0,
+                        //     items:[
+                        //         {
+                        //             xtype:'container',
+                        //             width:'49.2%',
+                        //             height:100,
+                        //             style:{
+                        //                 'z-index':'99',
+                        //                 'position':'fixed!important',
+                        //                 'border':'1px solid #000',
+                        //                 'background-color':'#fff'
+                        //             }
+                        //         }
+                        //     ]
+                        // }
+                        //----------------- 查询模态框end
+
+
+
                     ]
                 },
                 {
                     xtype: 'container',
-                    height: 60,
+                    cls:'Wrapper-config',
+                    height: 50,
                     width: '100%',
                     padding: 0,
                     style: {
                         // 'background-color':'#f1f1f1'
 
-                    }
+                    },
+                    items: [
+                        {
+                            cls:'Wrapper-config-displaymode',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-liulan',
+                            text: '显示方式',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                        {
+                            cls:'Wrapper-config-category',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-leixing',
+                            text: '干部分类',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                        {
+                            cls:'Wrapper-config-query',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-query',
+                            text: '查询',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                        {
+                            cls:'Wrapper-config-statistics',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-tongji',
+                            text: '统计分析',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                        {
+                            cls:'Wrapper-config-form',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-biaodan',
+                            text: '表单',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                        {
+                            cls:'Wrapper-config-roster',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-huamingce',
+                            text: '名册',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                        {
+                            cls:'Wrapper-config-export',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-daochu',
+                            text: '导入/导出',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                        {
+                            cls:'Wrapper-config-batch',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-piliang',
+                            text: '批量处理',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                        {
+                            cls:'Wrapper-config-displaycontrol',
+                            menu: [{
+                                text:'Menu Item 1'
+                            },{
+                                text:'Menu Item 2'
+                            },{
+                                text:'Menu Item 3'
+                            }],
+                            xtype: 'button',
+                            iconCls: 'iconfont icon-xianshiqi',
+                            text: '显示控制',
+                            style:{
+                                'background-color':'#fff',
+                                'border-color':'#d9e0e6',
+                                'vertical-align':'middle',
+                                'margin-right':'10px'
+                            }
+                        },
+                    ]
                 },
                 {
                     cls: 'Wrapper-grid',

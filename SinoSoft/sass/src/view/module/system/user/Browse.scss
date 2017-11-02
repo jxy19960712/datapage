@@ -1,5 +1,5 @@
 .Wrapper-headerbar {
-  border-bottom:1px solid #ccc!important;
+  border-bottom: 1px solid #ccc !important;
   .Wrapper-headerbar-btn {
     line-height: 60px;
     right: 10px !important;
@@ -12,7 +12,30 @@
       color: #fff !important;
     }
   }
+  .Wrapper-headerbar-search {
+    right: 130px !important;
+    left: auto !important;
+    .x-form-trigger-wrap {
+      border-radius: 44px;
+      .x-form-text-wrap, .x-form-search-trigger {
+        border-radius: 44px;
+        color: #35baf5;
+      }
+    }
+    overflow: visible !important;
+    .x-panel-body {
+      height: 100% !important;
+      border: none;
+      overflow: visible !important;
+      .x-tree-view {
+        overflow: visible !important;
 
+      }
+      .x-grid-header-ct {
+        overflow: visible !important;
+      }
+    }
+  }
   .Wrapper-headerbar-titile {
     top: 0 !important;
     left: 45px !important;
@@ -36,6 +59,74 @@
 
     }
   }
+}
+
+
+
+
+
+
+
+
+.Wrapper-config {
+  .x-btn-wrap-default-small.x-btn-arrow-right:after{
+    color: #919191!important;
+  }
+  .x-autocontainer-innerCt{
+    vertical-align: middle;
+  }
+
+  .x-btn-inner-default-small{
+    color:#919191;
+  }
+  //----------
+  .Wrapper-config-displaymode {
+    .x-btn-icon-el-default-small{
+      color:#71b35c;
+    }
+  }
+  .Wrapper-config-category{
+    .x-btn-icon-el-default-small{
+      color:#f5c154;
+    }
+  }
+  .Wrapper-config-query{
+    .x-btn-icon-el-default-small{
+      color:#5cb9f2;
+    }
+  }
+  .Wrapper-config-statistics{
+    .x-btn-icon-el-default-small{
+      color:#e97637;
+    }
+  }
+  .Wrapper-config-form{
+    .x-btn-icon-el-default-small{
+      color:#6dc9f0;
+    }
+  }
+  .Wrapper-config-roster{
+    .x-btn-icon-el-default-small{
+      color:#f6c054;
+    }
+  }
+  .Wrapper-config-export{
+    .x-btn-icon-el-default-small{
+      color:#5dc042;
+    }
+  }
+  .Wrapper-config-batch{
+    .x-btn-icon-el-default-small{
+      color:#efce87;
+    }
+  }
+  .Wrapper-config-displaycontrol{
+    .x-btn-icon-el-default-small{
+      color:#51adf6;
+    }
+  }
+
+
 }
 
 //--------------------------------right selectBar----------------

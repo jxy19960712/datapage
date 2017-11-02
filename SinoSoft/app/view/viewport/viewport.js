@@ -49,7 +49,7 @@ Ext.define('SinoSoft.view.viewport.viewport', {
                     reference: 'treelistContainer',
                     scrollable: { y: true, scrollbars: false },
                     style: {
-                        'background-color':'rgb(44, 56, 69)'
+                        'background-color':'rgb(44, 56, 69)',
                     },
                     items: [{
                         xtype: 'treelist',
