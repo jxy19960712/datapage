@@ -1,0 +1,58 @@
+//----------------------------------------------
+
+.Container-section-select3 {
+  border: none;
+  //height: 969px !important;
+  //width: 17.6% !important;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .3);
+  z-index: 1;
+  //overflow: visible !important;
+  .x-grid-item-container {
+    width: 100% !important;
+  }
+  .x-panel-bodyWrap {
+    overflow: visible !important;
+    .x-form-trigger-wrap{
+      border-radius: 44px;
+      .x-form-text-wrap,.x-form-search-trigger{
+        border-radius: 44px;
+        color:#35baf5;
+      }
+    }
+    .x-panel-body {
+      height: 100% !important;
+      border: none;
+      overflow: visible !important;
+      .x-tree-view {
+        overflow: visible !important;
+
+      }
+      .x-grid-header-ct {
+        overflow: visible !important;
+      }
+    }
+  }
+}
+.Container-section-select3-titlebar-icon{
+  i{
+    font-size:20px;
+  }
+}
+//----------------------------------------------
+.Wrapper-from{
+  border:none!important;
+  .x-autocontainer-innerCt{
+    .x-form-text-wrap,.x-form-trigger-wrap,.x-form-trigger{
+      border-radius: 5px;
+    }
+  }
+
+}
+.treebtn-icon{
+color:#496278!important;
+  font-size:18px;
+
+}
+.icon-liulan{
+  font-size:14px;
+}

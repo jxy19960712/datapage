@@ -71,16 +71,15 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                 },
                 items: [
                     {
-                        cls: 'Container-section-select2-titlebar-icon',
+                        cls: 'Container-section-select3-titlebar-icon',
                         xtype: 'container',
                         height: 50,
                         width: 50,
                         html: '<i class="iconfont">&#xe7fb;</i>',
                         style: {
                             'color': '#496278',
-                            'line-height':'50px',
-                            'text-align':'center',
-                            'margin-left':'10px'
+                            'line-height': '50px',
+                            'text-align': 'center',
                         }
                     },
                     {
@@ -98,10 +97,10 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
             },
             items: [
                 {
-                    title: '全部信息集',
+                    iconCls:'iconfont icon-plane treebtn-icon',
+                    title: '全部',
                     xtype: 'treepanel',
                     store: 'files',
-                    // cls: 'Container-section-select',
                     expanderFirst: false,
                     expanderOnly: false,
                     singleExpand: false,
@@ -111,10 +110,10 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    title: '按分类查看',
+                    iconCls:'iconfont icon-fenlei treebtn-icon',
+                    title: '分类',
                     xtype: 'treepanel',
                     store: 'files',
-                    // cls: 'Container-section-select',
                     expanderFirst: false,
                     expanderOnly: false,
                     singleExpand: false,
@@ -124,10 +123,25 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    title: '我的收藏',
+                    iconCls:'iconfont icon-star-copy treebtn-icon',
+                    title: '收藏',
                     xtype: 'treepanel',
                     store: 'files',
-                    // cls: 'Container-section-select',
+                    expanderFirst: false,
+                    expanderOnly: false,
+                    singleExpand: false,
+                    listeners: {
+                        //itemclick:'ontreenodeclick'
+                    }
+                    //bind: '{navItems}'
+                },
+                {
+                    iconCls:'iconfont treebtn-icon icon-liulan',
+                    title: '浏览',
+                    xtype: 'treepanel',
+                    store: 'files',
+                    isAjax:false,
+                    showTbar:true,
                     expanderFirst: false,
                     expanderOnly: false,
                     singleExpand: false,

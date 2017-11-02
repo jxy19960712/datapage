@@ -272,7 +272,7 @@
 //------------------navbar---------------------
 .Container-nav {
   //height: 1000px !important;
-  margin-right: 5px!important;
+  margin-right: 5px !important;
   .x-treelist-toolstrip {
     .x-treelist-item-tool {
       width: 100% !important;
@@ -319,6 +319,13 @@
               width: 100% !important;
             }
             .x-panel-bodyWrap {
+              .x-form-trigger-wrap {
+                border-radius: 44px;
+                .x-form-text-wrap, .x-form-search-trigger {
+                  border-radius: 44px;
+                  color: #35baf5;
+                }
+              }
               overflow: visible !important;
               .x-panel-body {
                 height: 100% !important;
@@ -355,10 +362,21 @@
     //
     //
     //}
-    .Wrapper-section {
-      border: 0;
-      border-top:1px solid #ccc;
+    .Wrapper-grid {
       border-radius: 0;
+      border-width: 1px;
+      border-color: #ccc!important;
+      >.x-panel-bodyWrap{
+        >.x-grid-header-ct{
+          border: none!important;
+        }
+        >.x-panel-body{
+          border-right-width:0px!important;
+          border-left-width:0px!important;
+          border-bottom-color: #ccc!important;
+        }
+      }
+
     }
   }
 }

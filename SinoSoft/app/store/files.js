@@ -4,7 +4,6 @@
     storeId: 'files',
     rootVisible: true,
     rootData: {
-
         text: 'Ext JS',
         // iconCls:'iconA',
         glyph: ' ',
