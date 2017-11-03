@@ -97,7 +97,7 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
             },
             items: [
                 {
-                    iconCls:'iconfont icon-plane treebtn-icon',
+                    iconCls: 'iconfont icon-plane treebtn-icon',
                     title: '全部',
                     xtype: 'treepanel',
                     store: 'files',
@@ -110,7 +110,7 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    iconCls:'iconfont icon-fenlei treebtn-icon',
+                    iconCls: 'iconfont icon-fenlei treebtn-icon',
                     title: '分类',
                     xtype: 'treepanel',
                     store: 'files',
@@ -123,7 +123,7 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    iconCls:'iconfont icon-star-copy treebtn-icon',
+                    iconCls: 'iconfont icon-star-copy treebtn-icon',
                     title: '收藏',
                     xtype: 'treepanel',
                     store: 'files',
@@ -136,12 +136,12 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    iconCls:'iconfont treebtn-icon icon-liulan',
+                    iconCls: 'iconfont treebtn-icon icon-liulan',
                     title: '浏览',
                     xtype: 'treepanel',
                     store: 'files',
-                    isAjax:false,
-                    showTbar:true,
+                    isAjax: false,
+                    showTbar: true,
                     expanderFirst: false,
                     expanderOnly: false,
                     singleExpand: false,
@@ -173,25 +173,6 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                 margin: '0 0 5 0',
             },
             items: [
-                // {
-                //     cls: 'Wrapper-titlebar',
-                //     xtype: "toolbar",
-                //     dock: 'top',
-                //     style:'border:0px',
-                //     layout: 'column',
-                //     items: [
-                //         {
-                //             cls:'Wrapper-titlebar-btn',
-                //             xtype: 'button',
-                //             text: '查询',
-                //             //handler: function (btn) {
-                //             //    btn.ownerCt.ownerCt.down('hidetitlegrid').show();
-                //             //    btn.ownerCt.ownerCt.down('hidetitlegrid').expand();
-                //             //}
-                //         },
-                //     ]
-                // },
-
                 {
                     xtype: 'toolbar',
                     'padding': 0,
@@ -231,7 +212,7 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     style: {
                         'border-top': 'none'
                     },
-                    height: 60,
+                    flex: 1,
                     width: '100%',
                     padding: 10,
                     items: [
@@ -259,14 +240,59 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                         },
                         {
                             xtype: 'container',
-                            height: 40,
+                            cls: 'Wrapper-operation-area',
+                            height: 50,
                             width: '100%',
-                            padding: 0,
                             style: {
                                 'border': '1px solid #35baf5',
-                                'border-bottom': 'none',
-                                'background-color': '#f1f1f1'
-                            }
+                                'border-bottom': '1px solid #d1d1d1',
+                                'padding': '0 10px 0 10px'
+                            },
+                            items: [
+                                {
+                                    cls: 'Wrapper-operation-area-button',
+                                    xtype: 'button',
+                                    iconCls: 'iconfont icon-zengjia add',
+                                    text: '新增',
+                                },
+                                {
+                                    cls: 'Wrapper-operation-area-button',
+                                    xtype: 'button',
+                                    iconCls: 'iconfont icon-xiugai revamp',
+                                    text: '修改',
+                                    style: {
+                                        // 'background-color':'#fff',
+                                        'border-color': '#d9e0e6',
+                                        'vertical-align': 'middle',
+                                        'margin-right': '10px'
+                                    }
+                                },
+                                {
+                                    cls: 'Wrapper-operation-area-button',
+                                    xtype: 'button',
+                                    iconCls: 'iconfont icon-delete delete',
+                                    text: '删除',
+                                    style: {
+                                        // 'background-color':'#fff',
+                                        'border-color': '#d9e0e6',
+                                        'vertical-align': 'middle',
+                                        'margin-right': '10px'
+                                    }
+                                },
+                                {
+                                    cls: 'Wrapper-operation-area-button',
+                                    xtype: 'button',
+                                    iconCls: 'iconfont icon-star-copy collect',
+                                    text: '收藏',
+                                    style: {
+                                        // 'background-color':'#fff',
+                                        'border-color': '#d9e0e6',
+                                        'vertical-align': 'middle',
+                                        'margin-right': '10px'
+                                    },
+                                    handler: 'onPromptClick'
+                                }
+                            ]
                         },
                         {
                             xtype: 'grid',
@@ -293,75 +319,9 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                                     {Name: 'aaaaaa', Nation: '汉族', Sex: '男'}
                                 ]
                             },
-                            flex: 1,
                             sortableColumns: false,
                             enableColumnHide: false,
                             enableColumnMove: false,
-                            // dockedItems: [
-                            //     {
-                            //         xtype: 'toolbar',
-                            //         //height: 60,
-                            //         'padding': 0,
-                            //         cls: 'aaaa',
-                            //         items: [
-                            //             {
-                            //                 cls: 'Wrapper-section-titile-icon',
-                            //                 xtype: 'container',
-                            //             },
-                            //             {
-                            //                 cls: 'Wrapper-section-titile',
-                            //                 xtype: 'label', text: '用户信息',
-                            //                 style: {
-                            //                     'font-weight': 'bold',
-                            //                     'font-size': '17px',
-                            //                     'font-weight': '400',
-                            //                     'color': '#4b6178',
-                            //                     'height': '60px',
-                            //                     'vertical-align': 'middle',
-                            //                     'line-height': '60px',
-                            //                 }
-                            //             },
-                            //             {
-                            //                 cls: 'Wrapper-titlebar-btn',
-                            //                 xtype: 'button',
-                            //                 text: '查询',
-                            //                 style: {
-                            //                     'vertical-align': 'middle',
-                            //                     'line-height': '60px',
-                            //                 }
-                            //                 //handler: function (btn) {
-                            //                 //    btn.ownerCt.ownerCt.down('hidetitlegrid').show();
-                            //                 //    btn.ownerCt.ownerCt.down('hidetitlegrid').expand();
-                            //                 //}
-                            //             },
-                            //             {
-                            //                 cls: 'asas',
-                            //                 xtype: 'container',
-                            //                 // text: '查询',
-                            //                 style: {
-                            //                     'height': '100px',
-                            //                     'width': '100%',
-                            //                     'background-color': 'red',
-                            //                     'position':'static!important'
-                            //                 }
-                            //                 //handler: function (btn) {
-                            //                 //    btn.ownerCt.ownerCt.down('hidetitlegrid').show();
-                            //                 //    btn.ownerCt.ownerCt.down('hidetitlegrid').expand();
-                            //                 //}
-                            //             },
-                            //         ]
-                            //     },
-                            //
-                            //
-                            //
-                            //
-                            //     // {
-                            //     //     xtype: 'pagingtoolbar',
-                            //     //     dock: 'bottom',
-                            //     //     displayInfo: true,
-                            //     //     cls:'123123'
-                            //     // },
-                            // ],
                             columns: [
                                 {text: '序号', xtype: 'rownumberer'},
                                 {text: '姓名', dataIndex: 'Name', flex: 1, cls: 'fffffz'},
@@ -371,42 +331,6 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                         },
                     ]
                 },
-
-                // {
-                //     xtype: 'splitter',
-                //     collapsible: true,
-                //     ignoreHide: true
-                // },
-
-                // {
-                //     xtype: 'hidetitlegrid',
-                //     //title: '用户档案',
-                //     flex: 1,
-                //     hidden: true,
-                //     collapsed: true,
-                //     //collapsible: true,
-                //     collapseDirection: 'bottom',
-                //     sortableColumns: false,
-                //     enableColumnHide: false,
-                //     enableColumnMove: false,
-                //     dockedItems: [
-                //         {
-                //             xtype: 'toolbar',
-                //             items: [
-                //                 {xtype: 'label', text: '用户档案'}
-                //             ]
-                //         },
-                //         {
-                //             xtype: 'pagingtoolbar',
-                //             dock: 'bottom',
-                //             displayInfo: true
-                //         },
-                //     ],
-                //     columns: [
-                //         {text: '序号', xtype: 'rownumberer'},
-                //         {text: '姓名', width: 120,}
-                //     ],
-                // }
             ]
         }
     ],

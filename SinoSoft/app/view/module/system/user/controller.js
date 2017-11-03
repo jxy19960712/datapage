@@ -4,7 +4,7 @@
 
     BeforeEdit: function (editor, context, eOpts) {
         var view = this.getView();
-        if (context.record.data.State==1) {
+        if (context.record.data.State == 1) {
             switch (context.field) {
                 case "RelateOrganName":
                     context.cancel = !view.canshenhe
@@ -31,7 +31,7 @@
 
             }
         });
-       
+
     },
     //grid添加事件------------------------------结束
 
@@ -44,25 +44,25 @@
         Ext.each(records, function (item) {
             senddatas.push(item.data);
         })
-        if (records.length>0) {
+        if (records.length > 0) {
             BD.DoAjax({
                 url: config.url + 'appid=1&method=254&token=' + BD.GuidCode,
                 meg: '正在保存数据...',
                 method: 'Post',
-                params: { data: Ext.encode(senddatas) },
+                params: {data: Ext.encode(senddatas)},
                 success: function (datas) {
                     setgrid.store.commitChanges();
                     if (fun) {
                         fun();
                     }
-                    Ext.toast({ html: "保存成功", align: 't' });
+                    Ext.toast({html: "保存成功", align: 't'});
                 },
                 failure: function () {
 
                 }
             });
         }
-        
+
     },
     //grid保存事件------------------------------结束
     Delete: function () {
@@ -77,10 +77,10 @@
                             url: config.url + 'appid=1&method=255&token=' + BD.GuidCode,
                             meg: '正在执行...',
                             method: 'Post',
-                            params: { cnid: records[0].data.CNId },
+                            params: {cnid: records[0].data.CNId},
                             success: function (datas) {
                                 setgrid.store.load();
-                                Ext.toast({ html: "删除成功", align: 't' });
+                                Ext.toast({html: "删除成功", align: 't'});
                             },
                             failure: function () {
 
@@ -89,10 +89,10 @@
                     }
                 });
             } else {
-                Ext.toast({ html: "单据状态错误", align: 't' });
+                Ext.toast({html: "单据状态错误", align: 't'});
             }
         } else {
-            Ext.toast({ html: "未选择行", align: 't' });
+            Ext.toast({html: "未选择行", align: 't'});
         }
     },
     TiJiao: function (btn, e, eOpts) {
@@ -110,11 +110,11 @@
                                         url: config.url + 'appid=1&method=265&token=' + BD.GuidCode,
                                         meg: '正在提交...',
                                         method: 'Post',
-                                        params: { cnid: records[0].data.CNId },
+                                        params: {cnid: records[0].data.CNId},
                                         success: function (datas) {
                                             Ext.apply(records[0].data, datas);
                                             grid.view.refresh();
-                                            Ext.toast({ html: "提交成功", align: 't' });
+                                            Ext.toast({html: "提交成功", align: 't'});
                                         },
                                         failure: function () {
 
@@ -132,11 +132,11 @@
                                     url: config.url + 'appid=1&method=265&token=' + BD.GuidCode,
                                     meg: '正在提交...',
                                     method: 'Post',
-                                    params: { cnid: records[0].data.CNId },
+                                    params: {cnid: records[0].data.CNId},
                                     success: function (datas) {
                                         Ext.apply(records[0].data, datas);
                                         grid.view.refresh();
-                                        Ext.toast({ html: "提交成功", align: 't' });
+                                        Ext.toast({html: "提交成功", align: 't'});
                                     },
                                     failure: function () {
 
@@ -148,13 +148,13 @@
                         });
                     }
                 } else {
-                    Ext.toast({ html: "提交时费用类型、人员、费用、产生时间为必填项", align: 't' });
+                    Ext.toast({html: "提交时费用类型、人员、费用、产生时间为必填项", align: 't'});
                 }
             } else {
-                Ext.toast({ html: "单据状态错误", align: 't' });
+                Ext.toast({html: "单据状态错误", align: 't'});
             }
         } else {
-            Ext.toast({ html: "未选择行", align: 't' });
+            Ext.toast({html: "未选择行", align: 't'});
         }
     },
     Shenhe: function () {
@@ -175,11 +175,11 @@
                                     url: config.url + 'appid=1&method=266&token=' + BD.GuidCode,
                                     meg: '正在审核...',
                                     method: 'Post',
-                                    params: { cnid: records[0].data.CNId, state: 1 },
+                                    params: {cnid: records[0].data.CNId, state: 1},
                                     success: function (datas) {
                                         Ext.apply(records[0].data, datas);
                                         setgrid.view.refresh();
-                                        Ext.toast({ html: "审核成功", align: 't' });
+                                        Ext.toast({html: "审核成功", align: 't'});
                                     },
                                     failure: function () {
 
@@ -190,11 +190,11 @@
                                     url: config.url + 'appid=1&method=266&token=' + BD.GuidCode,
                                     meg: '正在审核...',
                                     method: 'Post',
-                                    params: { cnid: records[0].data.CNId, state: 2 },
+                                    params: {cnid: records[0].data.CNId, state: 2},
                                     success: function (datas) {
                                         Ext.apply(records[0].data, datas);
                                         setgrid.view.refresh();
-                                        Ext.toast({ html: "审核成功", align: 't' });
+                                        Ext.toast({html: "审核成功", align: 't'});
                                     },
                                     failure: function () {
 
@@ -205,13 +205,13 @@
                         }
                     });
                 } else {
-                    Ext.toast({ html: "单据状态错误", align: 't' });
+                    Ext.toast({html: "单据状态错误", align: 't'});
                 }
             } else {
-                Ext.toast({ html: "您不具有对该记录的审核权限", align: 't' });
+                Ext.toast({html: "您不具有对该记录的审核权限", align: 't'});
             }
         } else {
-            Ext.toast({ html: "未选择行", align: 't' });
+            Ext.toast({html: "未选择行", align: 't'});
         }
     },
     Statement: function () {
@@ -226,11 +226,11 @@
                             url: config.url + 'appid=1&method=267&token=' + BD.GuidCode,
                             meg: '正在结算...',
                             method: 'Post',
-                            params: { cnid: records[0].data.CNId },
+                            params: {cnid: records[0].data.CNId},
                             success: function (datas) {
                                 Ext.apply(records[0].data, datas);
                                 setgrid.view.refresh();
-                                Ext.toast({ html: "结算成功", align: 't' });
+                                Ext.toast({html: "结算成功", align: 't'});
                             },
                             failure: function () {
 
@@ -239,10 +239,10 @@
                     }
                 });
             } else {
-                Ext.toast({ html: "单据状态错误", align: 't' });
+                Ext.toast({html: "单据状态错误", align: 't'});
             }
         } else {
-            Ext.toast({ html: "未选择行", align: 't' });
+            Ext.toast({html: "未选择行", align: 't'});
         }
     },
     ShowPJ: function () {
@@ -254,51 +254,278 @@
                 note: records[0].data
             }).show();
         } else {
-            Ext.toast({ html: "未选择行", align: 't' });
+            Ext.toast({html: "未选择行", align: 't'});
         }
     },
 
-    afterRender: function() {
+    afterRender: function () {
         var tips = [{
             target: this.lookup('rich').el,
-            anchor: 'bottom',
-            // html: '<ul style="margin-bottom: 15px;">' +
-            // '<li>5 bedrooms</li>' +
-            // '<li>Close to transport</li>' +
-            // '<li>Large backyard</li>' +
-            // '</ul>' +
-            // '<img style="width: 300px; height: 225px;" src="resources/house.jpg" />',
-            items: [{
-                xtype:'form',
+            cls: 'Wrapper-headerbar-btn-tipbar',
+            // anchor: 'bottom',
+            width: '49.2%',
+            autoHide: false,
+            closable: false,
+            // style: {
+            //     'background-color': '#fff',
+            //     'border-color': '#5eb9f0',
+            //     'transform': 'translateX(-2.5%) translateY(-2.5%)',
+            //     'padding': 0
+            // },
+            layout: {
+                type: 'table',
+                columns: 1,
+                tableAttrs: {
+                    style: {
+                        width: '100%'
+                    }
+                }
+            },
+            defaults: {
+                border: true,
+                padding: 5,
+                style: {
+                    'margin-bottom': '0px'
+                }
+            },
+            bbar:{
+                cls:'Wrapper-headerbar-btn-tipbar-bottombar',
+                padding:0,
                 items:[
                     {
-                        allowBlank: false,
-                        xtype:'textfield',
-                        fieldLabel: 'User ID',
-                        name: 'user',
-                        emptyText: 'user id',
-                        msgTarget: 'under'
-                    }, {
-                        allowBlank: false,
-                        xtype:'textfield',
-                        fieldLabel: 'Password',
-                        name: 'pass',
-                        emptyText: 'password',
-                        inputType: 'password'
-                    }, {
-                        xtype:'checkbox',
-                        fieldLabel: 'Remember me',
-                        name: 'remember'
+                        width:'100%',
+                        xtype:'container',
+                        layout:'column',
+                        style:{
+                            'padding':'10px 0 10px 0'
+                        },
+                        items:[
+                            {
+                                cls: 'Wrapper-headerbar-btn',
+                                xtype: 'button',
+                                text: '重置',
+                                style:{
+                                    'background-color': '#5db9f0'
+                                }
+                            },
+                            {
+                                cls: 'Wrapper-headerbar-btn',
+                                xtype: 'button',
+                                text: '查询',
+                                style:{
+                                    'background-color': '#bcbcbc'
+                                }
+                            },
+                            {
+                                cls: 'Wrapper-headerbar-btn-more',
+                                xtype: 'button',
+                                text: '其他查询条件省略',
+                            }
+                        ]
                     }
                 ]
-            }],
-
-            width: 415,
-            autoHide: false,
-            closable: true
+            },
+            items: [
+                {
+                    width: 465,
+                    xtype: 'textfield',
+                    fieldLabel: '姓名',
+                },
+                {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '性别',
+                    name: 'remember',
+                    items: [
+                        {
+                            boxLabel: '男',
+                        },
+                        {
+                            boxLabel: '女',
+                        },
+                    ]
+                },
+                {
+                    xtype: 'form',
+                    frame: true,
+                    layout: 'column',
+                    style: {
+                        'border': 0
+                    },
+                    defaultType: 'textfield',
+                    items: [{
+                        fieldLabel: '任意年龄',
+                        vtype: 'daterange',
+                    }, {
+                        xtype: 'tbtext',
+                        text: '至',
+                        style: {
+                            'line-height': '32px'
+                        }
+                    }, {
+                        itemId: 'enddt',
+                        vtype: 'daterange',
+                    }
+                    ]
+                },
+                {
+                    xtype: 'form',
+                    frame: true,
+                    layout: 'column',
+                    style: {
+                        'border': 0
+                    },
+                    defaultType: 'datefield',
+                    items: [{
+                        fieldLabel: '出生年月',
+                        vtype: 'daterange',
+                    }, {
+                        xtype: 'tbtext',
+                        text: '至',
+                        style: {
+                            'line-height': '32px'
+                        }
+                    }, {
+                        vtype: 'daterange',
+                    }
+                    ]
+                },
+                {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '民族',
+                    width:'100%',
+                    items: [
+                        {
+                            boxLabel: '汉族',
+                        },
+                        {
+                            boxLabel: '少数民族',
+                        },
+                    ]
+                },
+                {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '政治面貌',
+                    width:'100%',
+                    items: [
+                        {
+                            boxLabel: '中共党员',
+                        },
+                        {
+                            boxLabel: '民主党派',
+                        },
+                        {
+                            boxLabel: '无党派',
+                        },
+                        {
+                            boxLabel: '群众',
+                        },
+                    ]
+                },
+                {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '最高全日制学历',
+                    width:'100%',
+                    items: [
+                        {
+                            boxLabel: '研究生',
+                        },
+                        {
+                            boxLabel: '本科',
+                        },
+                        {
+                            boxLabel: '大专',
+                        },
+                        {
+                            boxLabel: '中专',
+                        },
+                        {
+                            boxLabel: '其他',
+                        },
+                    ]
+                },
+                {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '最高学历',
+                    width:'100%',
+                    items: [
+                        {
+                            boxLabel: '研究生',
+                        },
+                        {
+                            boxLabel: '本科',
+                        },
+                        {
+                            boxLabel: '大专',
+                        },
+                        {
+                            boxLabel: '中专',
+                        },
+                        {
+                            boxLabel: '其他',
+                        },
+                    ]
+                },
+                {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '干部类别',
+                    width:'100%',
+                    items: [
+                        {
+                            boxLabel: '中管干部',
+                        },
+                        {
+                            boxLabel: '省管干部',
+                        },
+                        {
+                            boxLabel: '市管干部',
+                        },
+                        {
+                            boxLabel: '县管干部',
+                        },
+                        {
+                            boxLabel: '其他',
+                        },
+                    ]
+                },
+                {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '领导职务',
+                    width:'100%',
+                    items: [
+                        {
+                            boxLabel: '领导职务',
+                        },
+                        {
+                            boxLabel: '非领导职务',
+                        },
+                    ]
+                },
+                {
+                    xtype: 'checkboxgroup',
+                    fieldLabel: '最高职务级别',
+                    width:'100%',
+                    items: [
+                        {
+                            boxLabel: '国家级正职',
+                        },
+                        {
+                            boxLabel: '国家级副职',
+                        },
+                        {
+                            boxLabel: '省部级正职',
+                        },
+                        {
+                            boxLabel: '厅局级',
+                        },
+                        {
+                            boxLabel: '县处级',
+                        },
+                    ]
+                },
+            ]
         }];
 
-        this.tips = Ext.Array.map(tips, function(cfg) {
+        this.tips = Ext.Array.map(tips, function (cfg) {
             cfg.showOnTap = true;
             return new Ext.tip.ToolTip(cfg);
         });

@@ -56,77 +56,117 @@
       height: 20px;
       width: 2px;
       background-color: #36baf5;
-
     }
   }
 }
 
-
-
-
-
-
-
-
-.Wrapper-config {
-  .x-btn-wrap-default-small.x-btn-arrow-right:after{
-    color: #919191!important;
+.Wrapper-operation-area {
+  .x-btn-default-small[class*="Wrapper-"] {
+    background-color: #fff;
+    &:active {
+      background-color: #f1f1f1;
+    }
   }
-  .x-autocontainer-innerCt{
+  .Wrapper-operation-area-button {
+    border-color: #d9e0e6 !important;
+    vertical-align: middle;
+    margin-right: 10px;
+    .displaymode {
+      color: #71b35c;
+    }
+    .category {
+      color: #f5c154;
+    }
+    .query {
+      color: #5cb9f2;
+    }
+    .statistics {
+      color: #e97637;
+    }
+    .form {
+      color: #6dc9f0;
+    }
+    .roster {
+      color: #f6c054;
+    }
+    .export {
+      color: #5dc042;
+    }
+    .batch {
+      color: #efce87;
+    }
+    .displaycontrol {
+      color: #51adf6;
+    }
+  }
+  .x-btn-wrap-default-small.x-btn-arrow-right:after {
+    color: #919191 !important;
+  }
+  .x-autocontainer-innerCt {
     vertical-align: middle;
   }
-
-  .x-btn-inner-default-small{
-    color:#919191;
+  .x-btn-inner-default-small {
+    color: #919191;
   }
   //----------
-  .Wrapper-config-displaymode {
-    .x-btn-icon-el-default-small{
-      color:#71b35c;
-    }
-  }
-  .Wrapper-config-category{
-    .x-btn-icon-el-default-small{
-      color:#f5c154;
-    }
-  }
-  .Wrapper-config-query{
-    .x-btn-icon-el-default-small{
-      color:#5cb9f2;
-    }
-  }
-  .Wrapper-config-statistics{
-    .x-btn-icon-el-default-small{
-      color:#e97637;
-    }
-  }
-  .Wrapper-config-form{
-    .x-btn-icon-el-default-small{
-      color:#6dc9f0;
-    }
-  }
-  .Wrapper-config-roster{
-    .x-btn-icon-el-default-small{
-      color:#f6c054;
-    }
-  }
-  .Wrapper-config-export{
-    .x-btn-icon-el-default-small{
-      color:#5dc042;
-    }
-  }
-  .Wrapper-config-batch{
-    .x-btn-icon-el-default-small{
-      color:#efce87;
-    }
-  }
-  .Wrapper-config-displaycontrol{
-    .x-btn-icon-el-default-small{
-      color:#51adf6;
+}
+
+//--------------------------------headerbar-btn-tipbar----------------
+.Wrapper-headerbar-btn-tipbar {
+  background-color: #fff;
+  border-color: #5eb9f0;
+  //transform: translateX(-2.5%) translateY(-2.5%);
+  left: 49.5% !important;
+  top: 9.9% !important;
+  padding: 0;
+
+  td.x-table-layout-cell {
+    border-bottom: 1px solid #ccc;
+    .x-form-check-group {
+      width: 120px !important;
+      padding: 0 5px 0 5px;
     }
   }
 
+  .x-tip-body-default {
+    width: 100% !important;
+    padding: 0 !important;
+  }
 
+  .Wrapper-headerbar-btn-tipbar-bottombar {
+    right: 0;
+    left: auto !important;
+    overflow: visible!important;
+    .x-box-inner{
+      overflow: visible!important;
+    }
+    .Wrapper-headerbar-btn {
+      line-height: 60px;
+      float: right;
+      height: 30px;
+      width: 100px;
+      border-radius: 5px;
+      line-height: 60px;
+      border: 0;
+      margin-left: 20px;
+      span {
+        color: #fff !important;
+      }
+    }
+    .Wrapper-headerbar-btn-more {
+      background-color: #fff;
+      position: absolute;
+      top: 50%;
+      left:-60%;
+      height: 40px;
+      border: 1px solid red;
+      border-radius: 5px;
+      span {
+        color: red !important;
+      }
+      transform: translateY(-50%);
+    }
+  }
 }
 
 //--------------------------------right selectBar----------------

@@ -134,3 +134,33 @@
     }
   }
 }
+
+//-----------------------------------operation-area
+.Wrapper-operation-area {
+  .x-btn-default-small[class*="Wrapper-"] {
+    background-color: #fff;
+    &:active {
+      background-color: #f1f1f1;
+    }
+  }
+  .Wrapper-operation-area-button {
+    border-color: #d9e0e6 !important;
+    vertical-align: middle;
+    margin-right: 10px;
+    .add {
+      color: #71b35c;
+    }
+    .revamp {
+      color: #f5c154;
+    }
+    .delete {
+      color: #b0c0cd;
+    }
+    .collect {
+      color: #d55a52;
+    }
+    &:nth-last-child(1) {
+      float: right;
+    }
+  }
+}
