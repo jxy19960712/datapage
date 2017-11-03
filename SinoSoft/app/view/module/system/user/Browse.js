@@ -75,8 +75,11 @@
         {
             xtype: 'container',
             cls: 'Container-section-article',
-            padding: 10,
+            // padding: 10,
             flex: 1,
+            style:{
+                'padding':'0 10px 10px 10px'
+            },
             layout: {
                 type: 'vbox',
                 align: 'stretch',
@@ -104,9 +107,9 @@
                                 'font-size': '17px',
                                 'font-weight': '400',
                                 'color': '#4b6178',
-                                'height': '60px',
+                                'height': '50px',
                                 'vertical-align': 'middle',
-                                'line-height': '60px',
+                                'line-height': '50px',
                             }
                         },
                         {
@@ -136,13 +139,22 @@
                         //         {
                         //             xtype:'container',
                         //             width:'49.2%',
-                        //             height:100,
                         //             style:{
                         //                 'z-index':'99',
                         //                 'position':'fixed!important',
                         //                 'border':'1px solid #000',
                         //                 'background-color':'#fff'
-                        //             }
+                        //             },
+                        //             layout: {
+                        //                 type: 'vbox',
+                        //                 align : 'stretch',
+                        //                 pack  : 'start',
+                        //             },
+                        //             items:[
+                        //                 {html:'panel 1', flex:1,border:1},
+                        //                 {html:'panel 2', height:150,border:1},
+                        //                 {html:'panel 3', flex:2,border:1}
+                        //             ]
                         //         }
                         //     ]
                         // }
@@ -155,7 +167,7 @@
                 {
                     xtype: 'container',
                     cls:'Wrapper-config',
-                    height: 50,
+                    height: 35,
                     width: '100%',
                     padding: 0,
                     style: {
