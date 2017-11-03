@@ -257,4 +257,50 @@
             Ext.toast({ html: "未选择行", align: 't' });
         }
     },
+
+    afterRender: function() {
+        var tips = [{
+            target: this.lookup('rich').el,
+            anchor: 'bottom',
+            // html: '<ul style="margin-bottom: 15px;">' +
+            // '<li>5 bedrooms</li>' +
+            // '<li>Close to transport</li>' +
+            // '<li>Large backyard</li>' +
+            // '</ul>' +
+            // '<img style="width: 300px; height: 225px;" src="resources/house.jpg" />',
+            items: [{
+                xtype:'form',
+                items:[
+                    {
+                        allowBlank: false,
+                        xtype:'textfield',
+                        fieldLabel: 'User ID',
+                        name: 'user',
+                        emptyText: 'user id',
+                        msgTarget: 'under'
+                    }, {
+                        allowBlank: false,
+                        xtype:'textfield',
+                        fieldLabel: 'Password',
+                        name: 'pass',
+                        emptyText: 'password',
+                        inputType: 'password'
+                    }, {
+                        xtype:'checkbox',
+                        fieldLabel: 'Remember me',
+                        name: 'remember'
+                    }
+                ]
+            }],
+
+            width: 415,
+            autoHide: false,
+            closable: true
+        }];
+
+        this.tips = Ext.Array.map(tips, function(cfg) {
+            cfg.showOnTap = true;
+            return new Ext.tip.ToolTip(cfg);
+        });
+    },
 });

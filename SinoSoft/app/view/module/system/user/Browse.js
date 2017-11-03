@@ -127,41 +127,32 @@
                                 'vertical-align': 'middle',
                                 'line-height': '60px',
                             },
+                            reference: 'rich'
                         },
-
-
                         //----------------- 查询模态框start
-                        // {
-                        //     xtype:'container',
-                        //     width:'100%',
-                        //     height:0,
-                        //     items:[
-                        //         {
-                        //             xtype:'container',
-                        //             width:'49.2%',
-                        //             style:{
-                        //                 'z-index':'99',
-                        //                 'position':'fixed!important',
-                        //                 'border':'1px solid #000',
-                        //                 'background-color':'#fff'
-                        //             },
-                        //             layout: {
-                        //                 type: 'vbox',
-                        //                 align : 'stretch',
-                        //                 pack  : 'start',
-                        //             },
-                        //             items:[
-                        //                 {html:'panel 1', flex:1,border:1},
-                        //                 {html:'panel 2', height:150,border:1},
-                        //                 {html:'panel 3', flex:2,border:1}
-                        //             ]
-                        //         }
-                        //     ]
-                        // }
+                        {
+                            id:'modal',
+                            xtype:'window',
+                            width:'100%',
+                            height:300,
+                            style:{
+                                'z-index':'20',
+                                // 'position':'fixed!important',
+                                'border':'1px solid #000',
+                                'background-color':'#fff'
+                            },
+                            layout: {
+                                type: 'vbox',
+                                align : 'stretch',
+                                pack  : 'start',
+                            },
+                            items:[
+                                {html:'panel 1', flex:1,border:1},
+                                {html:'panel 2', height:150,border:1},
+                                {html:'panel 3', flex:2,border:1}
+                            ],
+                        },
                         //----------------- 查询模态框end
-
-
-
                     ]
                 },
                 {
