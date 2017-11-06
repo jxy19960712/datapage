@@ -1,4 +1,4 @@
-Ext.define('SinoSoft.view.module.system.temp.controller', {
+Ext.define('SinoSoft.view.module.system.temp3.controller', {
     extend: 'Ext.app.ViewController',
     alias: 'controller.tempcontroller',
     onPromptClick: function () {
@@ -110,5 +110,8 @@ Ext.define('SinoSoft.view.module.system.temp.controller', {
             ]
         });
         win.show();
-    }
+    },
+    data: {
+        value:0.5
+    },
 });

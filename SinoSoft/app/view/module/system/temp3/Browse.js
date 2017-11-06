@@ -1,6 +1,6 @@
-Ext.define('SinoSoft.view.module.system.temp.Browse', {
+Ext.define('SinoSoft.view.module.system.temp3.Browse', {
     extend: 'SinoSoft.util.Browse',
-    xtype: 'tempbrowse',
+    xtype: 'tempbrowse3',
     requires: [],
     controller: 'tempcontroller',
 
@@ -47,7 +47,40 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     'font-size': '18px',
                     'color': '#35baf5',
                 }
-            }
+            },
+            {
+                xtype: 'tbtext',
+                text: '信息完成度',
+                style: {
+                    'margin-left': '50px',
+                }
+            },
+            {
+                xtype: 'progressbar',
+                width: 200,
+                value:0.7,
+                style:{
+                    'border-radius':'200px'
+                }
+            },
+            {
+                cls: 'Wrapper-headerbar-btn selectleader',
+                xtype: 'button',
+                menu: [{
+                    text: 'Menu Item 1'
+                }, {
+                    text: 'Menu Item 2'
+                }, {
+                    text: 'Menu Item 3'
+                }],
+                text: '张翰时'
+            },
+            {
+                xtype: 'button',
+                cls: 'Wrapper-headerbar-btn',
+                text: '切换到任免表'
+            },
+
         ]
     },
     items: [
@@ -99,23 +132,28 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
             },
             items: [
                 {
-                    iconCls: 'iconfont icon-plane treebtn-icon',
+                    iconCls:'iconfont icon-plane treebtn-icon',
                     title: '全部',
-                    xtype: 'treepanel',
+                    xtype: 'ajaxtreeview',
                     store: 'files',
+                    isAjax:false,
+                    showTbar:true,
                     expanderFirst: false,
                     expanderOnly: false,
                     singleExpand: false,
                     listeners: {
                         //itemclick:'ontreenodeclick'
-                    }
+                    },
                     //bind: '{navItems}'
                 },
                 {
-                    iconCls: 'iconfont icon-fenlei treebtn-icon',
+                    iconCls:'iconfont icon-fenlei treebtn-icon',
                     title: '分类',
-                    xtype: 'treepanel',
+                    xtype: 'ajaxtreeview',
                     store: 'files',
+                    isAjax:false,
+                    showTbar:true,
+                    // cls: 'Container-section-select',
                     expanderFirst: false,
                     expanderOnly: false,
                     singleExpand: false,
@@ -125,10 +163,13 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    iconCls: 'iconfont icon-star-copy treebtn-icon',
+                    iconCls:'iconfont icon-star-copy treebtn-icon',
                     title: '收藏',
-                    xtype: 'treepanel',
+                    xtype: 'ajaxtreeview',
                     store: 'files',
+                    isAjax:false,
+                    showTbar:true,
+                    // cls: 'Container-section-select',
                     expanderFirst: false,
                     expanderOnly: false,
                     singleExpand: false,
@@ -138,12 +179,13 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     //bind: '{navItems}'
                 },
                 {
-                    iconCls: 'iconfont treebtn-icon icon-liulan',
+                    iconCls:'iconfont treebtn-icon icon-liulan',
                     title: '浏览',
-                    xtype: 'treepanel',
+                    xtype: 'ajaxtreeview',
                     store: 'files',
-                    isAjax: false,
-                    showTbar: true,
+                    isAjax:false,
+                    showTbar:true,
+                    // cls: 'Container-section-select',
                     expanderFirst: false,
                     expanderOnly: false,
                     singleExpand: false,
@@ -214,7 +256,7 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                     style: {
                         'border-top': 'none'
                     },
-                    flex: 1,
+                    flex: 5,
                     width: '100%',
                     padding: 10,
                     items: [
@@ -317,8 +359,6 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                                     {Name: 'aaaaaa', Nation: '汉族', Sex: '男'},
                                     {Name: 'aaaaaa', Nation: '汉族', Sex: '男'},
                                     {Name: 'aaaaaa', Nation: '汉族', Sex: '男'},
-                                    {Name: 'aaaaaa', Nation: '汉族', Sex: '男'},
-                                    {Name: 'aaaaaa', Nation: '汉族', Sex: '男'},
                                     {Name: 'aaaaaa', Nation: '汉族', Sex: '男'}
                                 ]
                             },
@@ -331,6 +371,140 @@ Ext.define('SinoSoft.view.module.system.temp.Browse', {
                                 {text: '民族', dataIndex: 'Nation', width: 120,},
                                 {text: '性别', dataIndex: 'Sex', width: 120,}
                             ],
+                        },
+                        {
+                            flex: 5,
+                            xtype: 'container',
+                            width: '100%',
+                            // title: '学位基本信息',
+                            padding: '10px 0 0 0 ',
+                            items: [
+                                {
+                                    xtype: 'container',
+                                    height: 45,
+                                    width: '100%',
+                                    padding: 0,
+                                    style: {
+                                        'background-color': '#35baf5',
+                                    },
+                                    items: [
+                                        {
+                                            xtype: 'tbtext',
+                                            text: '学位基本信息',
+                                            height: 45,
+                                            style: {
+                                                'line-height': '45px',
+                                                'font-size': '16px',
+                                                'color': '#fff',
+                                                'text-indent': '1em'
+                                            }
+                                        }
+                                    ]
+                                }, {
+                                    style: {
+                                        'border': '1px solid #35baf5',
+                                        'border-top': 'none'
+                                    },
+                                    xtype: 'container',
+                                    layout: 'column',
+                                    width: '100%',
+                                    items: [
+                                        {
+                                            layout: 'form',
+                                            columnWidth: .3333,
+                                            border: false,
+                                            padding: 10,
+                                            items: [
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '学位证书编号',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '学位授予国家（地区）',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '学位授予时间',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '学位授予单位',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            layout: 'form',
+                                            columnWidth: .3333,
+                                            border: false,
+                                            padding: 10,
+                                            items: [
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '学位授予单位所在行政区划',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '最高学位标识',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '学位代码',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                            ]
+                                        },
+                                        {
+                                            layout: 'form',
+                                            columnWidth: .3333,
+                                            border: false,
+                                            padding: 10,
+                                            items: [
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '第二学位',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '教育类别',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                                {
+                                                    xtype: 'textfield',
+                                                    fieldLabel: '学位名称',
+                                                    maxLength: 100,
+                                                    style: 'text-align:right'
+                                                },
+                                                {
+                                                    xtype: 'button',
+                                                    width: 100,
+                                                    text: '保存',
+                                                    style: {
+                                                        'margin':'20px 0 0 290%',
+                                                        'border-radius':'5px'
+                                                    }
+                                                }
+                                            ]
+                                        },
+                                    ]
+                                }
+                            ]
                         },
                     ]
                 },

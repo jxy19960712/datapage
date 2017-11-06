@@ -75,6 +75,16 @@ Ext.define('SinoSoft.view.viewport.viewmodel', {
                         iconCls: 'x-fa fa-tag',
                         viewType:'tempbrowse2',
                         leaf: true
+                    },{
+                        text: '用户管理4',
+                        iconCls: 'x-fa fa-tag',
+                        viewType:'tempbrowse3',
+                        leaf: true
+                    },{
+                        text: '用户管理5',
+                        iconCls: 'x-fa fa-tag',
+                        viewType:'tempbrowse4',
+                        leaf: true
                     }, {
                         text: '树的使用',
                         iconCls: 'x-fa fa-trash',
